@@ -1,0 +1,22 @@
+{
+  "name": "ros-jedi",
+  "main": "./ros-jedi",
+  "version": "0.0.0",
+  "description": "ATOM + ROS = Jedi-like Powers",
+  "keywords": ["ros", "robots", "linter"],
+  "repository": "https://github.com/DLu/atom-ros-jedi",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.4.0 <2.0.0"
+  },
+  "dependencies": {
+    "atom-linter": "~10.0.0"
+  },
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "2.0.0": "provideLinter"
+      }
+    }
+  }
+}
