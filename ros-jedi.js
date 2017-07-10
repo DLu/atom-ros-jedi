@@ -47,7 +47,7 @@ export function provideLinter() {
                       file: editorPath,
                       position: [[line, 0], [line, 1]],
                     },
-                    excerpt: match[3],
+                    excerpt: match[3] + ' [' + match[4] + ']',
                     description: match[4],
                   });
               }
