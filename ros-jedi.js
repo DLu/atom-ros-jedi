@@ -41,13 +41,20 @@ export function provideLinter() {
                   console.log(str_array[i]);
               }else{
                   var line = Number.parseInt(match[2])-1;
+                  var level = Number.parseInt(match[5]);
+                  var sev;
+                  if(level >= 3){
+                      sev = 'error';
+                  }else{
+                      sev = 'info';
+                  }
                   toReturn.push({
-                    severity: 'error',
+                    severity: sev,
                     location: {
                       file: editorPath,
                       position: [[line, 0], [line, 1]],
                     },
-                    excerpt: match[3] + ' [' + match[4] + ']',
+                    excerpt: match[3] + ' [' + match[4] + ']' + ' [' + match[5] + ']',
                     description: match[4],
                   });
               }
